@@ -1,38 +1,72 @@
+# Student Performance Analysis
 
-# Student Database Management System
+**Project type:** Reconstructed learning / portfolio project  
+**Level:** Beginner  
+**Author:** Wanyonyi Joy Nafula
 
-## Project Overview
-This project demonstrates a basic student database management system designed to store and manage student records using Python and SQL.
+## Project overview
 
-## Objectives
-- Store student information in a structured database.
-- Add new student records.
-- Update existing records.
-- Retrieve stored student information.
-- Demonstrate basic database operations.
+This project demonstrates a basic workflow for exploring student performance data with Python and Pandas. It calculates average scores, groups records using a simple threshold, prints summary statistics and creates charts.
 
-## Technologies Used
+The included dataset is **synthetic**: all records are fictional and were created for learning. It does not represent actual learners or a real school.
+
+## Questions explored
+
+- What is the average score in each subject?
+- How many records fall into each performance group?
+- What is the relationship (correlation) between study hours and average score in this sample?
+
+## Tools
+
 - Python
-- SQL
+- Pandas
+- Matplotlib
 
+## Files
 
-## Core Operations
-- Create student records.
-- Read and retrieve student records.
-- Update student information.
-- Delete records (if implemented).
+- `student_performance.csv` — fictional sample dataset.
+- `student_performance_analysis.py` — analysis script.
+- `outputs/` — charts and analysed data generated when the script runs.
 
-## Key Learning Outcomes
-- Understanding structured data storage.
-- Writing basic SQL queries.
-- Connecting programming logic with database operations.
-- Managing student records.
+## Setup and run
 
-## How to Run
-1. Clone or download this repository.
-2. Set up the database.
-3. Install the required dependencies.
-4. Run the Python application.
+1. Install Python 3.
+2. Open a terminal in this folder.
+3. Install dependencies:
 
-## Author
-Wanyonyi Joy Nafula
+   ```bash
+   pip install pandas matplotlib
+   ```
+
+4. Run:
+
+   ```bash
+   python student_performance_analysis.py
+   ```
+
+The script creates an `outputs` folder containing two charts and a CSV with calculated columns.
+
+## Method
+
+1. Load the CSV into a Pandas DataFrame.
+2. Inspect the first records and check for missing values.
+3. Calculate each learner's average across Mathematics, English and Science.
+4. Categorise records as `Pass` when the average is at least 50, otherwise `Needs support`.
+5. Print descriptive statistics and the correlation between study hours and average score.
+6. Create and save visualisations.
+
+## Important interpretation note
+
+A correlation in this small fictional dataset does not prove that additional study hours cause higher marks. The dataset is small and artificial, so its results should not be generalised to real students.
+
+## Possible improvements
+
+- Use a larger, real, anonymised dataset with appropriate permission.
+- Add validation for missing or invalid scores.
+- Compare results across classes or terms.
+- Explore attendance and performance together.
+- Add more visualisations and a written analysis of findings.
+
+## Learning objectives
+
+This project is intended to practise loading CSV data, selecting columns, calculating values, using Pandas summary functions, interpreting correlation and creating basic charts.
